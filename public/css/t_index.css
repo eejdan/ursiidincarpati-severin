@@ -10,6 +10,19 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ body { /* color globals */ 
+  --roz-inchis: #d20962;
+  --portocaliu: #f47721;
+  --verde: #7ac143;
+  --verde-inchis: #00a78e;
+  --albastru: #00bce4;
+  --mov: #7d3f98;
+  --gray-3: #52565e;
+  --gray-2: #caccd1;
+  --gray-1: #f3f4f7;
+  
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -3030,17 +3043,17 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #0d6efd;
+  background-color: var(--gray-3);
   border-color: #0d6efd;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #0b5ed7;
+  background-color: var(--gray-3);
   border-color: #0a58ca;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
-  background-color: #0b5ed7;
+  background-color:  var(--gray-3);
   border-color: #0a58ca;
   box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
 }
@@ -4686,7 +4699,6 @@ textarea.form-control-lg {
 }
 .accordion-button:not(.collapsed) {
   color: #0c63e4;
-  background-color: #e7f1ff;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
 }
 .accordion-button:not(.collapsed)::after {
@@ -7837,7 +7849,7 @@ textarea.form-control-lg {
 
 .bg-light {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+  background-color: var(--gray-1) !important;
 }
 
 .bg-dark {

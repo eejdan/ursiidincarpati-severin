@@ -1,0 +1,16 @@
+body { /* color globals */ 
+    --roz-inchis: #d20962;
+    --portocaliu: #f47721;
+    --verde: #7ac143;
+    --verde-inchis: #00a78e;
+    --albastru: #00bce4;
+    --mov: #7d3f98;
+    --gray-3: #52565e;
+    --gray-2: #caccd1;
+    --gray-1: #f3f4f7;
+    
+  }
+
+.btn btn-primary{
+   background-color: var(--gray-3)  ;
+}
