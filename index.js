@@ -5,10 +5,6 @@ const express = require('express');
 
 const app = express();
 const ejs = require("ejs");
-const req = require('express/lib/request');
-const res = require('express/lib/response');
-
-
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));

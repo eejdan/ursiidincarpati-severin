@@ -1,12 +1,36 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>Signin Template · Bootstrap v5.0</title>
+<!DOCTYPE html>
+
+<head>
+    <%- include('./partials/head')  %> 
+   <title>Practiker</title>
+   <!-- Favicon-->
+   <link rel="icon" type="image/x-icon" href="favicon.ico" />
+   <!-- Core theme CSS (includes Bootstrap)-->
+   <link href="css/t_index.css" rel="stylesheet" />
+   <link rel="stylesheet" href="css/index.css">
+</head>
+<div class="wrapper">
+    <div class="logo">
+        <img src="" alt="">
+    </div>
+    <div class="text-center mt-4 name">
+        Twitter
+    </div>
+    <form class="p-3 mt-3">
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="text" name="userName" id="userName" placeholder="Username">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" name="password" id="pwd" placeholder="Password">
+        </div>
+        <button class="btn mt-3">Login</button>
+    </form>
+    <div class="text-center fs-6">
+        <a href="#">Forget password?</a> or <a href="#">Sign up</a>
+    </div>
+</div>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
 
