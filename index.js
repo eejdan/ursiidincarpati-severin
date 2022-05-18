@@ -31,7 +31,24 @@ app.get('/profil', (req, res) =>
      
  app.get('/login_page', (req, res) =>
  {     res.render('login_page') })
-     
+
+ app.get('/first-page', (req, res) =>
+ {     res.render('first-page') })
+
+   app.get('/register-page', (req, res) =>
+ {     res.render('register-page') })
+
+ app.get('/register-profesori', (req, res) =>
+ {     res.render('register-profesori') })
+
+ app.get('/register-studenti', (req, res) =>
+ {     res.render('register-studenti') })
+
+ app.get('/register-reprezentanti', (req, res) =>
+ {     res.render('register-reprezentanti') })
+              
+
+                         
 
 
 app.listen(80, () => console.log('server: alive'));

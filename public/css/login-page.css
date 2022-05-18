@@ -1,0 +1,7 @@
+.login-content-wrapper {     display: flex;   
+      top: 0;     left: 0;    
+       justify-content: center;    
+        align-items: center;  
+        position: relative; top: 15rem;
+     }  
+.login-content-container {     width: 500px;   }
