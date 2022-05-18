@@ -29,7 +29,9 @@ app.get('/profil', (req, res) =>
  app.get('/cv', (req, res) =>
  {     res.render('cv') })
      
-
+ app.get('/login_page', (req, res) =>
+ {     res.render('login_page') })
+     
 
 
 app.listen(80, () => console.log('server: alive'));
