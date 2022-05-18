@@ -1,7 +1,9 @@
-<!DOCTYPE html>
+
+
+  <!DOCTYPE html>
 
 <head>
-    <%- include('./partials/head')  %> 
+    <% include('./partials/head')  %> 
    <title>Practiker</title>
    <!-- Favicon-->
    <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -18,23 +20,44 @@
               <form>
                 <img class="mb-4" src="/img/practiker.png" alt="" width="72" height="57">
                 <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-        
                 <div class="form-floating">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <input type="text" class="form-control" id="floatingInput" >
+                    <label for="floatingInput">Cod unic profesor</label>
+                  </div>
+                
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="floatingInput" >
                   <label for="floatingInput">Email address</label>
                 </div>
                 <div class="form-floating">
-                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                  <input type="password" class="form-control" id="floatingPassword" >
                   <label for="floatingPassword">Password</label>
                 </div>
         
+                
+     
                 <div class="checkbox mb-3">
-                  <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                  </label>
-                </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
 
+
+                </div>
+                <style>
+                    a:link {
+                      color: white;
+                      background-color: transparent;
+                      text-decoration: none;
+                    }
+                    a:visited {
+                  color: white;
+                  background-color: transparent;
+                  text-decoration: none;
+                }
+                
+                                </style>
+
+                <div class="button1">
+                <button class="w-50 btn btn-lg btn-primary" type="submit">Sign in</button>
+                <button class="w-40 btn btn-lg btn-primary" type="button" > <a href="/register-page">Back</a></button>
+                </div>
               </form>
             </main>
         </div>

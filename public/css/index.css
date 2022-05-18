@@ -10,4 +10,9 @@ body { /* color globals */
     --gray-1: #f3f4f7;
     
   }
-
+body{
+  background-image: url(/img/IT.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}

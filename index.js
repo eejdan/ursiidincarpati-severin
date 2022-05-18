@@ -41,8 +41,8 @@ app.get('/profil', (req, res) =>
  app.get('/register-profesori', (req, res) =>
  {     res.render('register-profesori') })
 
- app.get('/register-studenti', (req, res) =>
- {     res.render('register-studenti') })
+ app.get('/register-student', (req, res) =>
+ {     res.render('register-student') })
 
  app.get('/register-reprezentanti', (req, res) =>
  {     res.render('register-reprezentanti') })
