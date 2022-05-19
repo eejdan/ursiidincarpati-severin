@@ -101,6 +101,7 @@ div.darkTable {
 .card img {
   border-radius: 5px 5px 0 0;
   width: 100%;
+  justify-content: space-around;
 }
 .signinimage{
   height:auto;
@@ -114,3 +115,8 @@ div.darkTable {
   width: auto;
   display:block;
 }
+.card-container { 
+  display: flex ;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+ }

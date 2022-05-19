@@ -34,8 +34,8 @@ app.get('/profil', (req, res) =>
  app.get('/cv', (req, res) =>
  {     res.render('cv') })
      
- app.get('/login_page', (req, res) =>
- {     res.render('login_page') })
+ app.get('/login_page_student', (req, res) =>
+ {     res.render('login_page_student') })
 
  app.get('/first-page', (req, res) =>
  {     res.render('first-page') })
@@ -78,7 +78,12 @@ app.get('/profil', (req, res) =>
  app.get('/prezenta-elevi-reprezentant', (req, res) =>
  {     res.render('prezenta-elevi-reprezentant') })
                                
-
+ app.get('/login_page_reprezentant', (req, res) =>
+ {     res.render('login_page_reprezentant') })
+ 
+ app.get('/login_page_profesor', (req, res) =>
+ {     res.render('login_page_profesor') })
+ 
 
 
 app.listen(80, () => console.log('server: alive'));
