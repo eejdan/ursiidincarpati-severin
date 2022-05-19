@@ -56,7 +56,18 @@ app.get('/profil', (req, res) =>
                                
  app.get('/profesor', (req, res) =>
  {     res.render('profesor') })
+                           
+ app.get('/prezenta-elevi', (req, res) =>
+ {     res.render('prezenta-elevi') })
                                
+
+ app.get('/date-elevi', (req, res) =>
+ {     res.render('date-elevi') })
+                               
+ app.get('/lista-practica', (req, res) =>
+ {     res.render('lista-practica') })
+                               
+
 
 
 app.listen(80, () => console.log('server: alive'));
