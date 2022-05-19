@@ -1,10 +1,7 @@
 const mongoose = require('mongoose');
 
 var firmSchema = new mongoose.Schema({
-    logo: {
-        type: mongoose.SchemaTypes.ObjectId,
-        ref: 'media'
-    },
+    logo: String,
     displayName: {
         type: String,
         required: true
@@ -13,6 +10,9 @@ var firmSchema = new mongoose.Schema({
         type: String
     },
     area: {
+        type: String
+    },
+    adresa: {
         type: String
     }
 }, {

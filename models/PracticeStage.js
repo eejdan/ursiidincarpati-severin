@@ -14,7 +14,11 @@ var practiceStageSchema = new mongoose.Schema({
     desc: String,
     dateStart: Date,
     weeks: Number,
-    workHours: String
+    workHours: String,
+    registrationEnded: {
+        type: Boolean,
+        default: false
+    }
 }, {
     collection: 'practiceStages'
 });

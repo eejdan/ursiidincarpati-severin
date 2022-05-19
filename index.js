@@ -1,4 +1,9 @@
+require('dotenv').config();
+
 const path = require('path')
+
+
+const mongoose = require('mongoose');
 
 const express = require('express');
 
@@ -76,5 +81,10 @@ app.get('/profil', (req, res) =>
 
 
 
-
 app.listen(80, () => console.log('server: alive'));
+
+
+
+async function init() {
+  mongoose.connect(process.env.MONGO_URI)
+}

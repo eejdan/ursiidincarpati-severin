@@ -17,6 +17,8 @@ var profSchema = new mongoose.Schema({
     },
     title: {
         type: String
+    }, uid: {
+        type: String
     }
 }, {
     collection: 'profs'
