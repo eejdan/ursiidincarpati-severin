@@ -12,42 +12,48 @@ body { /* color globals */
   }
 body{
  
-
+  
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-color: var(--gray-2);
+  background-color: #fafafa;
 }
 div.darkTable {
   font-family: "Arial Black", Gadget, sans-serif;
-
-  background-color: var(--gray-2);
+  background-color: #ffffff;
   width: 100%;
   height: 700px;
   text-align: center;
 }
 .divTable.darkTable .divTableCell, .divTable.darkTable .divTableHead {
   padding: 3px 2px;
-  
+  border-radius: 5px;
+ 
+  color: black;
 }
 .divTable.darkTable .divTableBody .divTableCell {
   font-size: 13px;
-  color: #E6E6E6;
+  font-family:"Exo",sans-serif;
+  font-weight: 100;
+  color: #2C2C2C;
+  
  
 }
 .divTable.darkTable .divTableRow:nth-child(even) {
-  background: #888888;
+  background: #fafafa;
   
 }
 .divTable.darkTable .divTableHeading {
-  background: #888888;
+  background: #f9f9f9;
+  color: #777777;
   
 }
 .divTable.darkTable .divTableHeading .divTableHead {
-  font-size: 15px;
-  font-weight: bold;
-  color: #E6E6E6;
-  text-align: center;
+  font-size: 15x;
+  font-weight: 300px;
+  font-family:"Exo",sans-serif;
+  color: #2C2C2C;
+  
 }
 .divTable.darkTable .divTableHeading .divTableHead:first-child {
   border-left: none;
@@ -81,4 +87,18 @@ div.darkTable {
   padding: 20px;
   width: 200px;
   height: 150px;
+}
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 400px;
+  border-radius: 5px; /* 5px rounded corners */
+
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
 }

@@ -67,6 +67,13 @@ app.get('/profil', (req, res) =>
  app.get('/lista-practica', (req, res) =>
  {     res.render('lista-practica') })
                                
+ app.get('/detalii-firma', (req, res) =>
+ {     res.render('detalii-firma') })
+                               
+ app.get('/prezenta-elevi-reprezentant', (req, res) =>
+ {     res.render('prezenta-elevi-reprezentant') })
+                               
+
 
 
 
