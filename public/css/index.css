@@ -34,9 +34,9 @@ div.darkTable {
 .divTable.darkTable .divTableBody .divTableCell {
   font-size: 13px;
   font-family:"Exo",sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   color: #2C2C2C;
-  
+   
  
 }
 .divTable.darkTable .divTableRow:nth-child(even) {
@@ -50,7 +50,7 @@ div.darkTable {
 }
 .divTable.darkTable .divTableHeading .divTableHead {
   font-size: 15x;
-  font-weight: 300px;
+  font-weight:normal;
   font-family:"Exo",sans-serif;
   color: #2C2C2C;
   
@@ -98,7 +98,19 @@ div.darkTable {
 }
 
 /* Add rounded corners to the top left and the top right corner of the image */
-img {
+.card img {
   border-radius: 5px 5px 0 0;
   width: 100%;
+}
+.signinimage{
+  height:auto;
+  width: 100%;
+}
+.card2{
+  margin-left:0;
+  margin-right:300px;
+  margin-top:250px;
+  position: relative;
+  width: auto;
+  display:block;
 }
