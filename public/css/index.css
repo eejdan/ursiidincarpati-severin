@@ -12,6 +12,7 @@ body { /* color globals */
   }
 body{
   background-image: url(/img/IT.jpg);
+
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
