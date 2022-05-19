@@ -2,9 +2,9 @@ const path = require('path')
 
 const express = require('express');
 
-
 const app = express();
 const ejs = require("ejs");
+
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -48,7 +48,15 @@ app.get('/profil', (req, res) =>
  {     res.render('register-reprezentanti') })
               
 
-                         
+ app.get('/reprezentant', (req, res) =>
+ {     res.render('reprezentant') })
+              
+ app.get('/creeare-practica', (req, res) =>
+ {     res.render('creeare-practica') })
+                               
+ app.get('/profesor', (req, res) =>
+ {     res.render('profesor') })
+                               
 
 
 app.listen(80, () => console.log('server: alive'));
