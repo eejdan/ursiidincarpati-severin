@@ -1,6 +1,4 @@
-const mongoose = require('mongoose'); // Erase if already required
-
-// Declare the Schema of the Mongo model
+const mongoose = require('mongoose');
 var reprezentantSchema = new mongoose.Schema({
     firm: {
         type: mongoose.SchemaTypes.ObjectId,
@@ -19,6 +17,4 @@ var reprezentantSchema = new mongoose.Schema({
 }, {
     collection: 'reprezentanti'
 });
-
-//Export the model
 module.exports = mongoose.model('Reprezentant', reprezentantSchema);

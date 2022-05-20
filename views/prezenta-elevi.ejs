@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('./partials/head') %>
+
+<head>
+  <%- include('./partials/head') %>
     <title>Practiker</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/t_index.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/index.css" />
-  </head>
-  <body>
-    <div class="d-flex" id="wrapper">
-      <!-- Sidebar-->
-      <%- include('./partials/sidebar-profesor') %>
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar-->
+    <%- include('./partials/sidebar-profesor') %>
       <!-- Page content wrapper-->
       <div id="page-content-wrapper">
         <!-- Top navigation-->
         <%- include('./partials/navbar-profesor') %>
-        <!-- Page content-->
-        <div class="container-fluid">
-          <h1 class="mt-4"></h1>
-          <div class="divTable darkTable">
-            <div class="divTableHeading">
-              <div class="divTableRow">
-                <div class="divTableHead" style="border-radius: 5px">
-                  Titlu practica
-                </div>
-                <div class="divTableHead">Nume student</div>
-                <div class="divTableHead">Prezenta</div>
+          <!-- Page content-->
+          <div class="container-fluid">
+            <h1 class="mt-4"></h1>
+            <div class="divTable darkTable">
+              <div class="divTableHeading">
+                <div class="divTableRow">
+                  <div class="divTableHead" style="border-radius: 5px">
+                    Titlu practica
+                  </div>
+                  <div class="divTableHead">Nume student</div>
+                  <div class="divTableHead">Prezenta</div>
 
-                <div class="divTableHead" style="border-radius: 5px">
-                  Nota finala
+                  <div class="divTableHead" style="border-radius: 5px">
+                    Nota finala
+                  </div>
+                </div>
+              </div>
+              <div class="divTableBody">
+                <div class="divTableRow">
+                  <div class="divTableBody">
+                    <div class="divTableRow">
+                      <div class="divTableCell" style="border-radius: 5px">Placeholder Titlu Practica</div>
+                      <div class="divTableCell">Placeholder aici vine nume student</div>
+                      <div class="divTableCell">Placeholder aici Prezenta</div>
+                      <div class="divTableCell" style="border-radius: 5px">Nota finala</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="divTableBody">
-              <div class="divTableRow">
-                <% practices.forEach(pr => { %>
-                  <div class="divTableBody">
-                      <div class="divTableRow">
-                      <div class="divTableCell"style="border-radius: 5px">Placeholder Titlu Practica</div>
-                      <div class="divTableCell">Placeholder aici vine nume student</div>
-                      <div class="divTableCell">Placeholder aici Prezenta</div>
-                      <div class="divTableCell"style="border-radius: 5px">Nota finala</div>
-                  </div>
-                  <% }) %>
-    </div>
-    <!-- Bootstrap core JS-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Core theme JS-->
-    <script src="js/t_index.js"></script>
-  </body>
+          </div>
+      </div>
+  </div>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <!-- Core theme JS-->
+  <script src="js/t_index.js"></script>
+</body>
+
 </html>

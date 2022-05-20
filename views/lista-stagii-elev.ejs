@@ -35,21 +35,6 @@
               </div>
             </div>
             <div class="divTableBody">
-              <% locals.st.forEach(s => { %>
-              <div class="divTableRow">
-                <div class="divTableCell" style="border-radius: 5px">
-                  <%= s.title %>
-                </div>
-                <div class="divTableCell"><%= s.practiceStage.dateStart %></div>
-                <% if(s.firmReview < 0) { 
-                <div class="divTableCell">RESPINS</div>
-                <div class="divTableCell"></div>
-                } else { %>  
-                <div class="divTableCell"></div>
-                <div class="divTableCell">ACCEPT</div>
-                } %>
-              </div>
-              <% }) %>
               <div class="divTableRow">
                 <div class="divTableCell" style="border-radius: 5px">
                   cell1_2
