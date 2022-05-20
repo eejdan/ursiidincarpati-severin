@@ -94,6 +94,8 @@ app.get('/profil', (req, res) =>
  app.get('/cod-unic', (req, res) =>
  {     res.render('cod-unic') })
  
+ app.get('/index', (req, res) =>
+ {     res.render('index') })
 
 
 // app.get('/', RootController.getLandingPage)
