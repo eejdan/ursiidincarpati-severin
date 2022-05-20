@@ -56,7 +56,7 @@ var studentFind = (req, res, next)  => {
     if(req.session.loggedIn != 'user' || req.session.dbid) {
         return res.redirect('/');
     }
-    let st =  await Student.findById(req.session.dbid);
+    let st =  await Student.findById(req.session.dbid).exec();
     if(!st) { req.session.loggedIn = false; res.redirect('/student/login/') }
     res.locals.student = st;
 }
@@ -64,7 +64,25 @@ var studentFind = (req, res, next)  => {
 router.get('/', 
     studentFind,
     async (req, res) => {
-    res.render('')
+    res.render('index', { user: res.locals.student });
+})
 
+router.get('/practica', 
+    studentFind,
+    async (req,res) => {
+    let pr = await PracticeStage.find({ registrationEnded: false }).exec();
+    res.render('practica', { user: res.locals.student, practices: pr });
+})
 
+router.get('/firme',
+    studentFind,
+    async (req,res) => {
+    let firms = await Firms.find().exec();
+    res.render('firme', { user: res.locals.student, firms: firms });
+})
+
+router.get('cont', 
+    studentFind, 
+    async (req,res) => {
+    let cont = await 
 })

@@ -25,109 +25,25 @@
                         <div class="divTableHeading">
                         <div class="divTableRow">
                         <div class="divTableHead"style="border-radius: 5px;">Nume Firma</div>
-                        <div class="divTableHead">Numar Locuri disponibile </div>
+                        <div class="divTableHead">Tehnologii </div>
                         <div class="divTableHead">Domeniul</div>
-                        <div class="divTableHead">Durata</div>
+                        <div class="divTableHead">Durata</div>  
+                        <div class="divTableHead">Orar</div>
                         <div class="divTableHead"style="border-radius: 5px">Data de incepere</div>
-                        
                         </div>
                         </div>
+                        <% practices.forEach(pr => { %>
                         <div class="divTableBody">
-                        <div class="divTableRow">
-                        <div class="divTableCell"style="border-radius: 5px">cell1_1</div>
-                        <div class="divTableCell">cell2_1</div>
-                        <div class="divTableCell">cell3_1</div>
-                        <div class="divTableCell">cell4_1</div>
-                        <div class="divTableCell"style="border-radius: 5px">cell5_1</div>
-                      
+                            <div class="divTableRow">
+                            <div class="divTableCell"style="border-radius: 5px"><%= locals.practices[pr].firm.displayName %></div>
+                            <div class="divTableCell"><%= locals.practices[pr].techUsed%></div>
+                            <div class="divTableCell"><%= locals.practices[pr].firm.area %></div>
+                            <div class="divTableCell"><%= locals.practices[pr].weeks %></div>
+                            <div class="divTableHead"><%= locals.practices[pr].workHours%></div>
+                            <div class="divTableCell"style="border-radius: 5px"><%= locals.practices[pr].dateStart %></div>
                         </div>
-                        <div class="divTableRow">
-                        <div class="divTableCell"style="border-radius: 5px">cell1_2</div>
-                        <div class="divTableCell">cell2_2</div>
-                        <div class="divTableCell">cell3_2</div>
-                        <div class="divTableCell">cell4_2</div>
-                        <div class="divTableCell"style="border-radius: 5px">cell5_2</div>
-                    
-                        </div>
-                        <div class="divTableRow">
-                        <div class="divTableCell"style="border-radius: 5px">cell1_3</div>
-                        <div class="divTableCell">cell2_3</div>
-                        <div class="divTableCell">cell3_3</div>
-                        <div class="divTableCell">cell4_3</div>
-                        <div class="divTableCell"style="border-radius: 5px">cell5_3</div>
-                       
-                        </div>
-                        <div class="divTableRow">
-                        <div class="divTableCell"style="border-radius: 5px">cell1_4</div>
-                        <div class="divTableCell">cell2_4</div>
-                        <div class="divTableCell">cell3_4</div>
-                        <div class="divTableCell">cell4_4</div>
-                        <div class="divTableCell"style="border-radius: 5px">cell5_4</div>
-                     
-                        </div>
-                        <div class="divTableRow">
-                        <div class="divTableCell"style="border-radius: 5px">cell1_5</div>
-                        <div class="divTableCell">cell2_5</div>
-                        <div class="divTableCell">cell3_5</div>
-                        <div class="divTableCell">cell4_5</div>
-                        <div class="divTableCell"style="border-radius: 5px">cell5_5</div>
-               
-                        </div>
-                        <div class="divTableRow">
-                        <div class="divTableCell"style="border-radius: 5px">cell1_6</div>
-                        <div class="divTableCell">cell2_6</div>
-                        <div class="divTableCell">cell3_6</div>
-                        <div class="divTableCell">cell4_6</div>
-                        <div class="divTableCell"style="border-radius: 5px">cell5_6</div>
-                       
-                        </div>
-                        <div class="divTableRow">
-                        <div class="divTableCell"style="border-radius: 5px">cell1_7</div>
-                        <div class="divTableCell">cell2_7</div>
-                        <div class="divTableCell">cell3_7</div>
-                        <div class="divTableCell">cell4_7</div>
-                        <div class="divTableCell"style="border-radius: 5px">cell5_7</div>
-                      
-                        </div>
-                        <div class="divTableRow">
-                        <div class="divTableCell"style="border-radius: 5px">cell1_8</div>
-                        <div class="divTableCell">cell2_8</div>
-                        <div class="divTableCell">cell3_8</div>
-                        <div class="divTableCell">cell4_8</div>
-                        <div class="divTableCell"style="border-radius: 5px">cell5_8</div>
-                    
-                        </div>
-                        <div class="divTableRow">
-                        <div class="divTableCell"style="border-radius: 5px">cell1_9</div>
-                        <div class="divTableCell">cell2_9</div>
-                        <div class="divTableCell">cell3_9</div>
-                        <div class="divTableCell">cell4_9</div>
-                        <div class="divTableCell"style="border-radius: 5px">cell5_9</div>
-                        
-                        </div>
-                        <div class="divTableRow">
-                        <div class="divTableCell"style="border-radius: 5px">cell1_10</div>
-                        <div class="divTableCell">cell2_10</div>
-                        <div class="divTableCell">cell3_10</div>
-                        <div class="divTableCell">cell4_10</div>
-                        <div class="divTableCell"style="border-radius: 5px">cell5_10</div>
-                        </div>
-                        <div class="divTableRow">
-                        <div class="divTableCell"style="border-radius: 5px">cell1_11</div>
-                        <div class="divTableCell">cell2_11</div>
-                        <div class="divTableCell">cell3_11</div>
-                        <div class="divTableCell">cell4_11</div>
-                        <div class="divTableCell"style="border-radius: 5px">cell5_11</div>
-                        </div>
-                        <div class="divTableRow">
-                        <div class="divTableCell"style="border-radius: 5px">cell1_12</div>
-                        <div class="divTableCell">cell2_12</div>
-                        <div class="divTableCell">cell3_12</div>
-                        <div class="divTableCell">cell4_12</div>
-                        <div class="divTableCell"style="border-radius: 5px">cell5_12</div> 
-                        </div>
-                        </div>
-                        </div>
+                        <% }) %>
+                    </div>
                 </div>
             </div>
         </div>
