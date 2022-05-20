@@ -12,12 +12,16 @@ const Firm = require('../models/Firm');
 const Reprezentant = require('../models/Reprezentant');
 
 
+
+
+
 const crypto = require('crypto');
 const readline = require('node:readline').createInterface({
     input: stdin,
     output: stdout
 })
 async function init() {
+    await mongoose.connect('mongodb+srv://GheneaCostin:zDA9HtodqWJWvFCf@cluster0.ja2st.mongodb.net/?retryWrites=true&w=majority')    
     for(let i=1;i<=5;i++) {
         readline.question('Nume Firma: ', firm => {
             readline.question('Adresa: ', address => {
