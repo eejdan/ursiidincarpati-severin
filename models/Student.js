@@ -21,12 +21,16 @@ const studentSchema = new mongoose.Schema({
         ref: 'faculties',
         required: true,
     }, */
-    cvMedia: [{
-        type: mongoose.SchemaTypes.ObjectId,
-        ref: 'media'
-    }]
+    cvMedia: String,
+    meta: {
+        firstName: String,
+        lastName: String,
+        email: String,
+        aptitudes: String,
+
+    }
 }, {
     collection: 'students'
-})
+})  
 
 module.exports = mongoose.model('Student', studentSchema);

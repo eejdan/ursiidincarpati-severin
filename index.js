@@ -13,9 +13,6 @@ var session = require('express-session');
 const app = express();
 const ejs = require("ejs");
 
-const RootController = require('./controllers/RootController');
-
-
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));
@@ -99,8 +96,8 @@ app.get('/profil', (req, res) =>
  
 
 
-app.get('/', RootController.getLandingPage)
-app.post('/logout', RootController.logoutUser)
+// app.get('/', RootController.getLandingPage)
+// app.post('/logout', RootController.logoutUser)
 
 app.listen(80, () => console.log('server: alive'));
 

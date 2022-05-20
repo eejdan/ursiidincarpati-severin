@@ -24,154 +24,31 @@
             <div class="divTableHeading">
               <div class="divTableRow">
                 <div class="divTableHead" style="border-radius: 5px">
-                  Numele firmei
+                  Titlu practica
                 </div>
-                <div class="divTableHead">Numar locuri disponibile</div>
                 <div class="divTableHead">Domeniu</div>
-                <div class="divTableHead">Durata stagiului de practica</div>
+                <div class="divTableHead">Durata Stagiului de practica</div>
 
                 <div class="divTableHead" style="border-radius: 5px">
-                  Data incepere stagiu de practica
+                  Data de incepere stagiu de practica
+                </div>
+                <div class="divTableHead" style="border-radius: 5px">
+                  Aplica
                 </div>
               </div>
             </div>
             <div class="divTableBody">
               <div class="divTableRow">
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell1_1
-                </div>
-                <div class="divTableCell">cell2_1</div>
-                <div class="divTableCell">cell3_1</div>
-                <div class="divTableCell">cell4_1</div>
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell5_1
-                </div>
-              </div>
-              <div class="divTableRow">
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell1_2
-                </div>
-                <div class="divTableCell">cell2_2</div>
-                <div class="divTableCell">cell3_2</div>
-                <div class="divTableCell">cell4_2</div>
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell5_2
-                </div>
-              </div>
-              <div class="divTableRow">
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell1_3
-                </div>
-                <div class="divTableCell">cell2_3</div>
-                <div class="divTableCell">cell3_3</div>
-                <div class="divTableCell">cell4_3</div>
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell5_3
-                </div>
-              </div>
-              <div class="divTableRow">
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell1_4
-                </div>
-                <div class="divTableCell">cell2_4</div>
-                <div class="divTableCell">cell3_4</div>
-                <div class="divTableCell">cell4_4</div>
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell5_4
-                </div>
-              </div>
-              <div class="divTableRow">
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell1_5
-                </div>
-                <div class="divTableCell">cell2_5</div>
-                <div class="divTableCell">cell3_5</div>
-                <div class="divTableCell">cell4_5</div>
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell5_5
-                </div>
-              </div>
-              <div class="divTableRow">
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell1_6
-                </div>
-                <div class="divTableCell">cell2_6</div>
-                <div class="divTableCell">cell3_6</div>
-                <div class="divTableCell">cell4_6</div>
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell5_6
-                </div>
-              </div>
-              <div class="divTableRow">
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell1_7
-                </div>
-                <div class="divTableCell">cell2_7</div>
-                <div class="divTableCell">cell3_7</div>
-                <div class="divTableCell">cell4_7</div>
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell5_7
-                </div>
-              </div>
-              <div class="divTableRow">
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell1_8
-                </div>
-                <div class="divTableCell">cell2_8</div>
-                <div class="divTableCell">cell3_8</div>
-                <div class="divTableCell">cell4_8</div>
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell5_8
-                </div>
-              </div>
-              <div class="divTableRow">
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell1_9
-                </div>
-                <div class="divTableCell">cell2_9</div>
-                <div class="divTableCell">cell3_9</div>
-                <div class="divTableCell">cell4_9</div>
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell5_9
-                </div>
-              </div>
-              <div class="divTableRow">
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell1_10
-                </div>
-                <div class="divTableCell">cell2_10</div>
-                <div class="divTableCell">cell3_10</div>
-                <div class="divTableCell">cell4_10</div>
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell5_10
-                </div>
-              </div>
-              <div class="divTableRow">
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell1_11
-                </div>
-                <div class="divTableCell">cell2_11</div>
-                <div class="divTableCell">cell3_11</div>
-                <div class="divTableCell">cell4_11</div>
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell5_11
-                </div>
-              </div>
-              <div class="divTableRow">
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell1_12
-                </div>
-                <div class="divTableCell">cell2_12</div>
-                <div class="divTableCell">cell3_12</div>
-                <div class="divTableCell">cell4_12</div>
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell5_12
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                <% practices.forEach(pr => { %>
+                  <div class="divTableBody">
+                      <div class="divTableRow">
+                      <div class="divTableCell"style="border-radius: 5px">Placeholder Titlu Practica</div>
+                      <div class="divTableCell">PLaceholder Domeniu</div>
+                      <div class="divTableCell">Placeholder Durata Stagiului de practica</div>
+                      <div class="divTableCell"style="border-radius: 5px">Data incepere stagiu de practica</div>
+                      <div class="divTableCell"style="border-radius: 5px"><form method="POST"><button>✓</button></form></div>
+                  </div>
+                  <% }) %>
     </div>
     <!-- Bootstrap core JS-->
     <script

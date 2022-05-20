@@ -10,9 +10,9 @@ var studentPracticeSessionSchema = new mongoose.Schema({
         type: mongoose.SchemaTypes.ObjectId,
         ref: 'students'
     },
-    firmSigned: {
-        type: Boolean,
-        default: false
+    firmReview: {
+        type: Number,
+        default: 0
     }
 }, {
     collection: 'studentPracticeSessions'

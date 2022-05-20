@@ -13,6 +13,19 @@ const Profesor = require('../models/Profesor')
 
 const router = express.Router();
 
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, __dirname+ '\\..\\static\\')
+    }
+})
+const upload = multer({ 
+    storage: storage, 
+    limits: {
+        fileSize: 1000000 //1mb
+    } 
+})
+
+
 const serverValidation = require('../middleware/serverValidation');
 
 
@@ -73,16 +86,51 @@ router.get('/practica',
     let pr = await PracticeStage.find({ registrationEnded: false }).exec();
     res.render('practica', { user: res.locals.student, practices: pr });
 })
+router.post('/practica',
+    check('prid').notEmpty().isAlphanumeric(),
+    studentFind, 
+    async (req, res) => {
+    let pr = await PracticeStage.find({ _id: req.body.prid, registrationEnded: false}).exec();
+    if(!pr) { res.sendStatus(404); }
+    let sps = new StudentPracticeSession({
+        practiceStage: pr._id,
+        presence: ['unset'],
+        student: res.locals.student._id,
+        firmReview: 0
+    });
+    await sps.save();
+    
+
+})
 
 router.get('/firme',
     studentFind,
     async (req,res) => {
-    let firms = await Firms.find().exec();
+    let firms = await Firm.find().exec();
     res.render('firme', { user: res.locals.student, firms: firms });
 })
 
-router.get('cont', 
+router.get('/profil', 
     studentFind, 
     async (req,res) => {
-    let cont = await 
+    res.render('profil', { user: res.locals.student });
+})
+router.post('/profil', 
+    async (req, res) => {
+    res.locals.student.meta = {
+        firstName: req.body.prenume,
+        lastName: req.body.nume,
+        email: req.body.email,
+        aptitudes: req.body.aptitudes
+    }
+    await res.locals.student.save();
+    res.redirect('/student/');
+})
+router.post('/cv',
+    upload.single('cv'),
+    async (req, res) => {
+    if(res.locals.student.cvMedia) {
+        res.locals.student.cvMedia = req.file.name;
+    }
+    return res.redirect('/student/')
 })
