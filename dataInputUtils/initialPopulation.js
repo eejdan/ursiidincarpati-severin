@@ -21,7 +21,7 @@ const readline = require('node:readline').createInterface({
     output: stdout
 })
 async function init() {
-    await mongoose.connect('mongodb+srv://GheneaCostin:zDA9HtodqWJWvFCf@cluster0.ja2st.mongodb.net/?retryWrites=true&w=majority')    
+    await mongoose.connect('mongodb+srv://GheneaCostin:zDA9HtodqWJWvFCf@cluster0.ja2st.mongodb.net/practiker?retryWrites=true&w=majority')    
     for(let i=1;i<=5;i++) {
         readline.question('Nume Firma: ', firm => {
             readline.question('Adresa: ', address => {
