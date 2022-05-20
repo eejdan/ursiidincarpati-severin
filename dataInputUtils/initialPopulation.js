@@ -34,7 +34,8 @@ async function init() {
                                     desc: desc,
                                     area: area,
                                     adresa: address
-                                }, (doc) => {
+                                }, (err,doc) => {
+                                    doc.save()
                                     let hsh = crypto.createHash('sha256')
                                     Reprezentant.create({
                                         firm: doc._id,
