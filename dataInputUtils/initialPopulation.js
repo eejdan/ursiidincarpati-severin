@@ -35,7 +35,7 @@ async function init() {
                                     area: area,
                                     adresa: address
                                 }, (doc) => {
-                                    let hsh = crypto.createHash('sha256 ')
+                                    let hsh = crypto.createHash('sha256')
                                     Reprezentant.create({
                                         firm: doc._id,
                                         username: username,
