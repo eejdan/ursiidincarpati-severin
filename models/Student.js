@@ -16,11 +16,11 @@ const studentSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
-    faculty: {
+/*     faculty: {
         type: mongoose.SchemaTypes.ObjectId,
         ref: 'faculties',
         required: true,
-    },
+    }, */
     cvMedia: [{
         type: mongoose.SchemaTypes.ObjectId,
         ref: 'media'

@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 var practiceStageSchema = new mongoose.Schema({
-    faculty: {
+/*     faculty: {
         type: mongoose.SchemaTypes.ObjectId,
         ref: 'faculties',
         required: true,
-    },
+    }, */
     techUsed: String,
     firm: {
         type: mongoose.SchemaTypes.ObjectId,
