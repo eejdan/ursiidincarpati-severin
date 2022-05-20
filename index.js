@@ -97,7 +97,15 @@ app.get('/profil', (req, res) =>
  app.get('/index', (req, res) =>
  {     res.render('index') })
 
+ app.get('/lista-stagii-elev', (req, res) =>
+ {     res.render('lista-stagii-elev') })
 
+ app.get('/index', (req, res) =>
+ {     res.render('index') })
+ 
+
+ app.get('/cereri-practica', (req, res) =>
+ {     res.render('cereri-practica') })
 // app.get('/', RootController.getLandingPage)
 // app.post('/logout', RootController.logoutUser)
 

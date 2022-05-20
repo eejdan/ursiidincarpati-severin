@@ -91,7 +91,7 @@ router.post('/practica',
     studentFind, 
     async (req, res) => {
     let pr = await PracticeStage.find({ _id: req.body.prid, registrationEnded: false}).exec();
-    if(!pr) { res.sendStatus(404); }
+    if(!pr) { res.redirect('/student/'); }
     let sps = new StudentPracticeSession({
         practiceStage: pr._id,
         presence: ['unset'],
@@ -99,8 +99,7 @@ router.post('/practica',
         firmReview: 0
     });
     await sps.save();
-    
-
+    return res.sendStatus(200);
 })
 
 router.get('/firme',
