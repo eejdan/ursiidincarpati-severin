@@ -24,10 +24,9 @@
             <div class="divTableHeading">
               <div class="divTableRow">
                 <div class="divTableHead" style="border-radius: 5px">
-                  Nume student
+                  Titlu Practica
                 </div>
-                <div class="divTableHead">CV student</div>
-                <div class="divTableHead">Titlu practica</div>
+                <div class="divTableHead">Data incepere</div>
                 <div class="divTableHead">Respins</div>
 
                 <div class="divTableHead" style="border-radius: 5px">
@@ -36,17 +35,21 @@
               </div>
             </div>
             <div class="divTableBody">
+              <% locals.st.forEach(s => { %>
               <div class="divTableRow">
                 <div class="divTableCell" style="border-radius: 5px">
-                  cell1_1
+                  <%= s.title %>
                 </div>
-                <div class="divTableCell">cell2_1</div>
-                <div class="divTableCell">cell3_1</div>
-                <div class="divTableCell">cell4_1</div>
-                <div class="divTableCell" style="border-radius: 5px">
-                  cell5_1
-                </div>
+                <div class="divTableCell"><%= s.practiceStage.dateStart %></div>
+                <% if(s.firmReview < 0) { 
+                <div class="divTableCell">RESPINS</div>
+                <div class="divTableCell"></div>
+                } else { %>  
+                <div class="divTableCell"></div>
+                <div class="divTableCell">ACCEPT</div>
+                } %>
               </div>
+              <% }) %>
               <div class="divTableRow">
                 <div class="divTableCell" style="border-radius: 5px">
                   cell1_2

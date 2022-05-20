@@ -28,7 +28,7 @@ const upload = multer({
 
 const serverValidation = require('../middleware/serverValidation');
 
-
+router.get('/login', async (req,res) => res.render('login_page_student'))
 router.post('/login',
     check('username').notEmpty().isAlphanumeric({max:48}),
     check('password').notEmpty().isString({max:48}),
@@ -46,7 +46,7 @@ router.post('/login',
     req.session.dbid = student._id;
     return res.redirect('/login/');
 })
-    
+router.get('/login', async (req,res) => res.render('register-student'))
 router.post('/register',
     check('username').notEmpty().isAlphanumeric({max:48}),
     check('password').notEmpty().isString({max:48}),
@@ -83,7 +83,7 @@ router.get('/',
 router.get('/practica', 
     studentFind,
     async (req,res) => {
-    let pr = await PracticeStage.find({ registrationEnded: false }).exec();
+    let pr = await PracticeStage.find({ registrationEnded: false }).populate('firm').exec();
     res.render('practica', { user: res.locals.student, practices: pr });
 })
 router.post('/practica',
@@ -107,6 +107,12 @@ router.get('/firme',
     async (req,res) => {
     let firms = await Firm.find().exec();
     res.render('firme', { user: res.locals.student, firms: firms });
+})
+router.get('/stagii', 
+    studentFind,
+    async (req, res) => {
+    let st = await StudentPracticeSession.find({ student: res.locals.student._id}).populate('practiceStage').exec()
+    res.redner('lista-stagii-elev', { user: res.locals.student, st: st})
 })
 
 router.get('/profil', 
