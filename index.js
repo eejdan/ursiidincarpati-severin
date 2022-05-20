@@ -85,6 +85,9 @@ app.get('/profil', (req, res) =>
  {     res.render('login_page_profesor') })
  
 
+ app.get('/cod-unic', (req, res) =>
+ {     res.render('cod-unic') })
+ 
 
 app.listen(80, () => console.log('server: alive'));
 
