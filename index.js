@@ -88,7 +88,18 @@ app.get('/profil', (req, res) =>
  app.get('/cod-unic', (req, res) =>
  {     res.render('cod-unic') })
  
+ app.get('/index', (req, res) =>
+ {     res.render('index') })
 
+ app.get('/lista-stagii-elev', (req, res) =>
+ {     res.render('lista-stagii-elev') })
+
+ app.get('/index', (req, res) =>
+ {     res.render('index') })
+ 
+
+ app.get('/cereri-practica', (req, res) =>
+ {     res.render('cereri-practica') })
 app.listen(80, () => console.log('server: alive'));
 
 
