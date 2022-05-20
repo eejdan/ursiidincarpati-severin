@@ -6,15 +6,24 @@ const path = require('path')
 const mongoose = require('mongoose');
 
 const express = require('express');
+const helmet = require('helmet')
+ 
+var session = require('express-session');
 
 const app = express();
 const ejs = require("ejs");
+
+const RootController = require('./controllers/RootController');
 
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));
 
+//va fi pastrat in .env
+app.use(session({ secret: 'noi suntem ursiiDinCarpati',
+resave: true,
+saveUninitialized: true }))
 
 app.get('/', (req, res) => {
     res.render('index')
@@ -88,6 +97,10 @@ app.get('/profil', (req, res) =>
  app.get('/cod-unic', (req, res) =>
  {     res.render('cod-unic') })
  
+
+
+app.get('/', RootController.getLandingPage)
+app.post('/logout', RootController.logoutUser)
 
 app.listen(80, () => console.log('server: alive'));
 
